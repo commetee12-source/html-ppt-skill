@@ -74,6 +74,21 @@ Starting a bar axis at 20 instead of 0 makes a 21.8 → 28.6 rise look dramatic.
 
 Vertically centred content wastes space at both ends, and the absolutely-positioned `.src` block collides with bottom labels. For a chart that wants the full height: top-align the slide and move the citation into the flow.
 
+## 5b. The cover has a job
+
+Open with **a date the audience owns**, then land on **something concrete** in the very next line, then make it literal with chips.
+
+A cover that could headline any other AI lecture (`나의 업무파트너 AI`, `AI 시대의 ○○`) is wasted. A cover carrying *their* start date cannot be recycled — which is exactly why it lands.
+
+**Plant hooks on the cover and collect them in the body.** A hook nobody collects is just a headline. Write the collection into the speaker notes explicitly — *"맨 앞에 띄워놨던 그것"* — because a presenter who introduces it as new kills a payoff you set up 90 minutes earlier.
+
+**Keep the closing question off the cover.** Open with a claim, close with the question. Ask it twice and the ending is a rerun.
+
+Two details that decide the tone:
+
+- **No exclamation mark.** `2027년!` reads as a flyer. If chapter 1 is building unease, the cover must not undercut it in the first second.
+- **Watch the particle.** `AI와 여러분은` is contrastive — it pushes the two apart. `AI와 여러분이` has them arriving together. One character changes the whole proposition.
+
 ## 6. Timing — slow, and slow *everything*
 
 Entry animations tuned for a laptop feel frantic in a big room. Working values:

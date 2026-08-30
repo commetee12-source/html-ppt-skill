@@ -28,6 +28,29 @@ If you are composing with the skill's shared assets instead, lift the `<style>` 
 | **Presenter window** | `S` or the bottom-left button opens a **separate window** (elapsed timer · current + next slide). Separate window = it does not appear when you share only the slide window in Zoom. |
 | **Print = PDF** | `@media print` drops the letterbox, restores `page-break-after`, and **freezes every animation at its final state** so bars and lines actually appear in the PDF. |
 
+## The cover pattern — open with a time, land on a specific
+
+The demo cover is not decoration; it is the deck's first working part.
+
+```
+2027년 1월,
+AI와 여러분이 같이 출근합니다
+— 그리고 여러분의 첫 업무 6개는, 전부 AI가 가장 잘하는 업무입니다
+[자료 취합] [표 만들기] [공문 기안] [자료 찾기] [회의록] [민원 응대]
+```
+
+Three moves, in this order:
+
+1. **A date the audience owns.** Not "AI 시대" — *their* start date. A cover that could headline any other lecture is a wasted cover.
+2. **Immediately down to something concrete.** A date alone is atmosphere. The sub-line names what the lecture is actually about, so the course listing reads clearly.
+3. **Chips make it literal.** Six nouns from their actual job. Now nobody is guessing what the next three hours contain.
+
+**Then pay both off in the body.** This cover plants *two* hooks and slide 4 collects one of them (`맨 앞에서 보신 그 여섯 개입니다`). A hook you never collect is just a headline — brief the speaker to say *"맨 앞에 띄워놨던 그것"*, not to introduce it as if it were new.
+
+**Do not put the closing question on the cover.** This deck opens with a claim and closes with `3년 뒤, 당신은 어떤 공무원입니까`. Ask it up front and the ending is a rerun.
+
+**Tone check:** an exclamation mark on a cover (`2027년!`) reads as a flyer, not a briefing — it undercuts a deck whose whole first chapter is building unease. And mind the particle: `AI와 여러분은` is contrastive and pushes the two apart; `AI와 여러분이` keeps them arriving together, which is the point.
+
 ## Typography
 
 Sized for the back row, not for your laptop. `h1 86 · h2 60 · statement 66 · body 30 · list 34`px at 1280×720.
