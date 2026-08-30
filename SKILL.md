@@ -20,9 +20,10 @@ One command, no build. Pure static HTML/CSS/JS with only CDN webfonts.
 ## What the skill gives you
 
 - **36 themes** (`assets/themes/*.css`) — minimal-white, editorial-serif, soft-pastel, sharp-mono, arctic-cool, sunset-warm, catppuccin-latte/mocha, dracula, tokyo-night, nord, solarized-light, gruvbox-dark, rose-pine, neo-brutalism, glassmorphism, bauhaus, swiss-grid, terminal-green, xiaohongshu-white, rainbow-gradient, aurora, blueprint, memphis-pop, cyberpunk-neon, y2k-chrome, retro-tv, japanese-minimal, vaporwave, midcentury, corporate-clean, academic-paper, news-broadcast, pitch-deck-vc, magazine-bold, engineering-whiteprint
-- **15 full-deck templates** (`templates/full-decks/<name>/`) — complete multi-slide decks with scoped `.tpl-<name>` CSS. 8 extracted from real-world decks (xhs-white-editorial, graphify-dark-graph, knowledge-arch-blueprint, hermes-cyber-terminal, obsidian-claude-gradient, testing-safety-alert, xhs-pastel-card, dir-key-nav-minimal), 7 scenario scaffolds (pitch-deck, product-launch, tech-sharing, weekly-report, xhs-post 3:4, course-module, **presenter-mode-reveal** — 演讲者模式专用)
+- **16 full-deck templates** (`templates/full-decks/<name>/`) — complete multi-slide decks with scoped `.tpl-<name>` CSS. 8 extracted from real-world decks (xhs-white-editorial, graphify-dark-graph, knowledge-arch-blueprint, hermes-cyber-terminal, obsidian-claude-gradient, testing-safety-alert, xhs-pastel-card, dir-key-nav-minimal), 8 scenario scaffolds (pitch-deck, product-launch, tech-sharing, weekly-report, xhs-post 3:4, course-module, **presenter-mode-reveal** — 演讲者模式专用, **kr-lecture-neon** — 한국어 연수·강의용 대형 텍스트)
 - **31 layouts** (`templates/single-page/*.html`) with realistic demo data
 - **27 CSS animations** (`assets/animations/animations.css`) via `data-anim`
+- **5 section-cover animations** (`assets/animations/section-covers.css`) — gear / shrink / build / ray / star, CSS-only chapter transitions for long decks
 - **20 canvas FX animations** (`assets/animations/fx/*.js`) via `data-fx` — particle-burst, confetti-cannon, firework, starfield, matrix-rain, knowledge-graph (force-directed), neural-net (pulses), constellation, orbit-ring, galaxy-swirl, word-cascade, letter-explode, chain-react, magnetic-field, data-stream, gradient-blob, sparkle-trail, shockwave, typewriter-multi, counter-explosion
 - **Keyboard runtime** (`assets/runtime.js`) — arrows, T (theme), A (anim), F/O, **S (presenter mode: magnetic-card popup with CURRENT / NEXT / SCRIPT / TIMER cards)**, N (notes drawer), R (reset timer in presenter)
 - **FX runtime** (`assets/animations/fx-runtime.js`) — auto-inits `[data-fx]` on slide enter, cleans up on leave
@@ -76,6 +77,7 @@ tasteful default and confirm.
    - 小红书图文 → `xiaohongshu-white`, `soft-pastel`, `rainbow-gradient`,
      `magazine-bold`
    - Academic / report → `academic-paper`, `editorial-serif`, `minimal-white`
+   - 한국어 연수 / 강의 (large room) → full-deck `kr-lecture-neon` (→ references/kr-lecture-decks.md)
    - Edgy / cyber / launch → `cyberpunk-neon`, `vaporwave`, `y2k-chrome`,
      `neo-brutalism`
 3. **Starting point.** One of the 14 full-deck templates, or scratch? Point
@@ -158,7 +160,8 @@ Chinese + English deck, and how to export.
 - [references/themes.md](references/themes.md) — all 36 themes with when-to-use.
 - [references/layouts.md](references/layouts.md) — all 31 layout types.
 - [references/animations.md](references/animations.md) — 27 CSS + 20 canvas FX animations.
-- [references/full-decks.md](references/full-decks.md) — all 15 full-deck templates.
+- [references/full-decks.md](references/full-decks.md) — all 16 full-deck templates.
+- [references/kr-lecture-decks.md](references/kr-lecture-decks.md) — **한국어 연수·강의용 덱** (large room / hundreds-on-Zoom): Korean line breaking, back-row sizing, chapter colour wayfinding, chart pitfalls, print-to-PDF, presenter window.
 - [references/presenter-mode.md](references/presenter-mode.md) — **演讲者模式 + 逐字稿编写指南（技术分享/演讲必看）**.
 - [references/authoring-guide.md](references/authoring-guide.md) — full workflow.
 
@@ -176,6 +179,7 @@ html-ppt/
 │   └── animations/
 │       ├── animations.css   (27 named CSS entry animations)
 │       ├── fx-runtime.js    (auto-init [data-fx] on slide enter)
+│       ├── section-covers.css (5 CSS-only chapter-cover animations)
 │       └── fx/*.js          (20 canvas FX modules: particles/graph/fireworks…)
 ├── templates/
 │   ├── deck.html                  (minimal 6-slide starter)

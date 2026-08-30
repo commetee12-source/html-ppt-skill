@@ -78,6 +78,29 @@ Put `class="anim-path-draw"` on `<svg>`; every path/line/circle inside gets draw
 | `spotlight` | Circular clip-path reveal. | Big reveal moments. |
 | `ripple-reveal` | Corner-origin ripple reveal. | Section transitions. |
 
+## Section covers (chapter transitions)
+
+`assets/animations/section-covers.css` — five CSS-only backdrops for **chapter cover slides**. No canvas, no JS. Use them when a long deck needs the audience to *feel* a new chapter starting; pair each with its own accent colour so the animation and the colour switch land together.
+
+| class | motion | fits |
+|---|---|---|
+| `fx-gear` | rotating dashed rings | industry, mechanism, "how it works" |
+| `fx-shrink` | bars collapsing and restoring | time saved, reduction, efficiency |
+| `fx-build` | blocks assembling in sequence | making, building, composition |
+| `fx-ray` | radar sweep + expanding pulses | outlook, tomorrow, reach |
+| `fx-star` | twinkling field | title and closing covers |
+
+```html
+<section class="slide mod m1" data-m="M1">
+  <div class="fx fx-gear"><i></i><i></i><i></i></div>
+  ...
+</section>
+```
+
+The `.fx` layer sits behind content at `z-index:0` and fades in with the slide. Needs `--acc` on the slide. Reference use: `templates/full-decks/kr-lecture-neon/`.
+
+---
+
 ## Respecting motion preferences
 
 All animations are disabled automatically when

@@ -83,8 +83,11 @@ These are not extracted from a single source — they are generic scaffolds for 
 | 13 | `xhs-post`         | 9  | **3:4 @ 810×1080**, warm pastel, dashed sticker cards, page dots | 小红书 图文 post, Instagram carousel |
 | 14 | `course-module`    | 7  | Warm paper + Playfair serif, persistent left sidebar of learning objectives, MCQ self-check | 教学模块, online course, workshop module |
 | 15 | `presenter-mode-reveal` 🎤 | 6  | **演讲者模式专用** · tokyo-night 默认 · 5 主题 T 键切换 · 每页带 150–300 字逐字稿示例 | **技术分享/演讲/课程**—需要按 S 键看逐字稿的场景 ✨ |
+| 16 | `kr-lecture-neon` 🇰🇷 | 16 | **대형 텍스트 · 16:9 letterbox** · chapter accent colours · 5 cover animations · 6 dependency-free chart types · presenter window · **single self-contained file** | 한국어 연수·강의, large training room (100+), several-hundred-person Zoom class |
 
 Each folder: `index.html`, scoped `style.css` (prefixed `.tpl-<name>`), `README.md`. The `xhs-post` template overrides the default `.slide` box to fixed `810×1080` for 3:4 portrait.
+
+> 🇰🇷 **`kr-lecture-neon` is the one deliberate exception to the shared-assets rule** — it inlines all CSS/JS and uses a local font stack, because training decks are handed to attendees as **one file opened offline**. It also replaces window-fill with a **16:9 letterbox** (`transform:scale(min(vw/W,vh/H))`) and ships its own minimal runtime. Lift its `<style>` block if you want the look on top of `base.css`. Design rules: [kr-lecture-decks.md](./kr-lecture-decks.md).
 
 > 🎤 **任何演讲场景（技术分享 / 课程 / 路演）都推荐用 `presenter-mode-reveal`**，或者参考 [presenter-mode.md](./presenter-mode.md) 指南给其他模板加 `<aside class="notes">` 逐字稿。
 
@@ -96,3 +99,5 @@ Each folder: `index.html`, scoped `style.css` (prefixed `.tpl-<name>`), `README.
 - Swap demo content, but keep the structural classes — they are what gives each template its identity.
 - The shared runtime (`assets/runtime.js`) provides keyboard nav, fullscreen, overview grid, theme cycling — you don't need to add any JS.
 - Charts are hand-rolled SVG (no CDN dependency). Feel free to replace with chart.js / echarts if you need interactive data.
+- Sizing a bar by `%` of a fixed-height track puts its value and label **outside** the measured box — overflow checks then pass while labels collide on screen. Give bar heights in `px`. (→ [kr-lecture-decks.md](./kr-lecture-decks.md) §5)
+- If a deck is meant to be printed to PDF, `@media print` must **freeze animations at their final state**, or the charts print empty.
