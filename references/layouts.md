@@ -13,7 +13,7 @@ Shared CSS (base, theme, animations) is already wired by `deck.html`.
 | file | purpose |
 |---|---|
 | `cover.html` | Deck cover. Kicker + huge title + lede + pill row. |
-| `toc.html` | Table of contents. 2×3 grid of numbered cards. |
+| `toc.html` | Table of contents. 2×3 grid of numbered cards. For a long deck with per-chapter accents, colour each row with its chapter's accent instead of leaving them uniform — see `.agenda` in `templates/full-decks/kr-lecture-neon/`. |
 | `section-divider.html` | Big numbered section break (02 · Theme). |
 
 ## Text-centric

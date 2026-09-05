@@ -52,6 +52,24 @@ Validated 5-colour set on deep navy:
 
 Pair the colour switch with a **chapter-cover animation** so the boundary is felt, not just seen → `assets/animations/section-covers.css`.
 
+## 4b. The agenda slide is what makes the colour mean anything
+
+Chapter colour is wayfinding (§4) — but only once the audience has been shown the key.
+Ship **a dedicated agenda slide as slide 2**, one row per chapter, each row painted in
+that chapter's own accent, and say the rule on the slide: *"장이 바뀌면 색이 바뀝니다."*
+
+A cover with a row of chips does not do this job. Chips read as decoration; the room
+cannot tell from them how many chapters there are or which one is the long one.
+
+- **One row per chapter, five max.** Sub-topics belong on the chapter cover's `.mod-toc`.
+- **Mark the longest chapter.** The question in the room is "where does this go", not
+  "what are the topics".
+- **No times, no dates.** `M3 · 55분` puts the presenter on a clock and kills reuse for
+  the next cohort. Timing goes in the presenter notes.
+
+Reference implementation: `.agenda` / `.agn` / `.ag1`–`.ag5` in the template, with a
+five-stop rainbow top bar so the slide is structurally distinct from cover and body.
+
 ## 5. Every number becomes a chart
 
 If a number is worth saying aloud, it is worth drawing. Dependency-free primitives in the template: vertical bars, horizontal bars, before/after boxes, step dots, KPI count-up, SVG polyline.
@@ -134,3 +152,10 @@ A modal freezes every event on the page — including whatever automation or hoo
 ## 10. Verify in a browser, not by reading
 
 Serve it (`python -m http.server`) — extensions block scripting on `file://`. Then run the overflow check in the README. Static reading will not catch a slide that overflows by 20px, and 20px is exactly enough to put a label under the footer.
+
+**Measure with `offsetTop` / `offsetHeight`, never `getBoundingClientRect()`.** Rects are
+post-transform, and this deck has two transforms on every slide: the letterbox `scale()`
+and, on any slide that has not played its entry animation, `.an`'s `translateY`. A
+rect-based check reports every un-entered slide as ~36px too tall — you then "fix"
+slides that were never broken and shrink type for no reason. Layout offsets are immune
+to both. Cross-check with `el.scrollHeight > el.clientHeight`.
